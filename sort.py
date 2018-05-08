@@ -4,7 +4,7 @@ from subprocess import call
 
 class sort:
     def __init__(self):
-        self.toIgnore = ["sort.py", "sort.json"]
+        self.toIgnore = ["sort.py", "sort.json", ".git"]
         self.cats = ["Code", "Zip", "Image", "Video", "Doc", "Ignore"]
         self.files = [f for f in os.listdir(os.getcwd()) if (not os.path.isdir(f) and f not in self.toIgnore)]
         self.dirs = [f for f in os.listdir(os.getcwd()) if (os.path.isdir(f) and f not in self.toIgnore and f not in self.cats and f!="Folders")]
